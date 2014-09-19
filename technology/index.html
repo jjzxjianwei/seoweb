@@ -1,0 +1,32 @@
+---
+layout: indextptechnology
+---
+
+<div class="index-content blog">
+    <div class="section">
+        <ul class="artical-cate">
+            <li class="on"><a href="/technology/index.html"><span>技术浅谈</span></a></li>
+            <li style="text-align:center"><a href="/life/index.html"><span>人生感悟</span></a></li>
+            <li style="text-align:right"><a href="/mbplayer/index.html"><span>音乐运动</span></a></li>
+        </ul>
+		      <div class="cate-bar"><span id="cateBar"></span></div>
+        <ul class="artical-list">
+        {% for post in site.categories.technology %}
+            <li> 
+                <h2><a href="{{ post.url }}"> <a href="{{ post.url }}">{{ post.title }}</a></h2>
+				
+                <div class="title-desc">{{post.description}}
+				
+				<h5>发布时间：{{ post.date|date:"%Y-%m-%d" }}</h5>
+				
+				</div>
+            </li>
+		  {% endfor %}
+        </ul>
+    </div>
+    <div class="aside">
+     <a class="home-menu-icon" href="#">蹇维BLOGO+囧</a>
+    </div>
+</div>
+
+
